@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>晓窗教育一体化平台</title>
+  <link rel="icon" type="images/x-icon" href="<%= MODULE_FTP_BASE_URL %>/favicon.ico">
+  <meta name="importmap-type" content="systemjs-importmap">
+  <script type="systemjs-importmap" src="<%= MODULE_API_BASE_URL %>/api/v1/importmaps"></script>
+  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js" as="script">
+  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js" as="script">
+  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js" as="script">
+  <link href="<%= MODULE_COMMON_BASE_URL %>/element/element-orange.css" type="text/css" rel="stylesheet"/>
+  <link href="<%= MODULE_COMMON_BASE_URL %>/widget/common-orange.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js"></script>
+  <script src="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js"></script>
+  <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js"></script>
+  <script>
+    System.import('@xcedu/portal');
+  </script>
+</body>
+</html>
