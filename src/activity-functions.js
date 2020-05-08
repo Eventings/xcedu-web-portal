@@ -1,5 +1,6 @@
 const MODULE_USER_PREFIX = '/user'
 const MODULE_SPACE_PREFIX = '/space'
+const MODULE_EMAIL_PREFIX = '/email'
 
 
 const SPEICAL_EXIST_NAVBAR_URLS = ['/user/change/pwd']
@@ -20,4 +21,8 @@ export function navbar (location) {
 
 export function space (location) {
   return startsWith(location, MODULE_SPACE_PREFIX)
+}
+
+export function email (location) {
+  return startsWith(location, MODULE_EMAIL_PREFIX)
 }

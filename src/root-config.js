@@ -25,6 +25,13 @@ axios.get('/api/v1/sites/current/config').then(({ data }) => {
     customProps
   )
 
+  registerApplication(
+    '@xcedu/email',
+    () => System.import('@xcedu/email'),
+    actives.email,
+    customProps
+  )
+
   start({ urlRerouteOnly: true })
   if (location.pathname === '/') {
     navigateToUrl('/space')
