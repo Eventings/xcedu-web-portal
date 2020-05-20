@@ -1,6 +1,6 @@
 const MODULE_USER_PREFIX = '/user'
 const MODULE_SPACE_PREFIX = '/space'
-const MODULE_EMAIL_PREFIX = '/email'
+const MODULE_EMAIL_PREFIX = '/mfs-email'
 
 
 const SPEICAL_EXIST_NAVBAR_URLS = ['/user/change/pwd']

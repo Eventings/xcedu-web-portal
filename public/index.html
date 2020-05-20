@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>晓窗教育一体化平台</title>
   <link rel="icon" type="images/x-icon" href="<%= MODULE_FTP_BASE_URL %>/favicon.ico">
   <meta name="importmap-type" content="systemjs-importmap">
-  <script type="systemjs-importmap" src="<%= MODULE_API_BASE_URL %>/api/v1/importmaps"></script>
+  <!-- <script type="systemjs-importmap" src="<%= MODULE_API_BASE_URL %>/api/v1/importmaps"></script> -->
+  <script type="systemjs-importmap">
+    {"imports":{"@xcedu/navbar":"http://gtyz.xiaochuang.com:8491/main.js","@xcedu/portal":"http://gtyz.xiaochuang.com:8000/main.js","@xcedu/user":"http://gtyz.xiaochuang.com:8001/main.js","@xcedu/space":"http://gtyz.xiaochuang.com:8002/main.js","@xcedu/education":"http://gtyz.xiaochuang.com:8003/main.js","@xcedu/email":"http://gtyz.xiaochuang.com:8004/main.js","@xcedu/ecard":"http://gtyz.xiaochuang.com:8005/main.js"}}
+  </script>
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js" as="script">
-  <link href="<%= MODULE_COMMON_BASE_URL %>/element/element-orange.css" type="text/css" rel="stylesheet"/>
-  <link href="<%= MODULE_COMMON_BASE_URL %>/widget/common-orange.css" type="text/css" rel="stylesheet">
+  <link href="<%= MODULE_COMMON_BASE_URL %>/element/element-blue.css" type="text/css" rel="stylesheet" />
+  <link href="<%= MODULE_COMMON_BASE_URL %>/widget/common-blue.css" type="text/css" rel="stylesheet">
 </head>
+
 <body>
   <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js"></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js"></script>
@@ -21,4 +26,5 @@
     System.import('@xcedu/portal');
   </script>
 </body>
+
 </html>
