@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "webpack-dev-server --progress --color --env development",
-    "build:deploy": "webpack-dev-server --bail --progress --color --env development"
+    "build:deploy": "webpack --bail --progress --color --env production"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
