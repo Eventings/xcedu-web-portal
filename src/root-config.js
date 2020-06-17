@@ -28,7 +28,11 @@ registerApplication(
 start({ urlRerouteOnly: true })
 if (location.pathname === '/') {
   // 判断是否有token 如果有 跳到默认页面 如果没有 跳到登陆页
-  navigateToUrl('/mfs-email')
+  if(localStorage.getItem('token')){
+    navigateToUrl('/mfs-email')
+  }else{
+    navigateToUrl('/user/login')
+  }
 }
 
 

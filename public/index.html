@@ -11,6 +11,9 @@
   <script type="systemjs-importmap">
     {"imports":{"@xcedu/navbar":"http://gtyz.xiaochuang.com:8491/main.js","@xcedu/portal":"http://gtyz.xiaochuang.com:8000/main.js","@xcedu/user":"http://gtyz.xiaochuang.com:8001/main.js","@xcedu/space":"http://gtyz.xiaochuang.com:8002/main.js","@xcedu/education":"http://gtyz.xiaochuang.com:8003/main.js","@xcedu/email":"http://gtyz.xiaochuang.com:8004/main.js","@xcedu/ecard":"http://gtyz.xiaochuang.com:8005/main.js"}}
   </script>
+  <!--[if IE]>
+  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/polyfill/promise.min.js" as="script">
+  <![endif]-->
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js" as="script">
@@ -19,6 +22,9 @@
 </head>
 
 <body>
+  <!--[if IE]>
+  <script src="<%= MODULE_COMMON_BASE_URL %>/polyfill/promise.min.js"></script>
+  <![endif]-->
   <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js"></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js"></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js"></script>
