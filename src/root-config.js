@@ -25,8 +25,28 @@ registerApplication(
   actives.email
 )
 
+registerApplication(
+  '@xcedu/forum',
+  () => System.import('@xcedu/forum'),
+  actives.forum
+)
+
+registerApplication(
+  '@xcedu/testBank',
+  () => System.import('@xcedu/testBank'),
+  actives.testBank
+)
+
 start({ urlRerouteOnly: true })
 if (location.pathname === '/') {
+  // 获取url从旧的系统中带过来的token
+  let tokenParams = window.location.search.replace(/\?.*token=(.+)(&.*|#.*)?$/, (w, l) => l)
+  const token = tokenParams.split('&')[0]
+  if(token){
+    if(!localStorage.getItem('token')){
+      localStorage.setItem('token',token)
+    }
+  }
   // 判断是否有token 如果有 跳到默认页面 如果没有 跳到登陆页
   if(localStorage.getItem('token')){
     navigateToUrl('/mfs-email')
