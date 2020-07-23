@@ -3,37 +3,55 @@ const { registerApplication, start, navigateToUrl } = singleSpa
 
 registerApplication(
   '@xcedu/navbar',
-  () => System.import('@xcedu/navbar'),
+  // () => System.import('@xcedu/navbar'),
+  function () {
+    return System.import('@xcedu/navbar')
+  },
   actives.navbar
 )
 
 registerApplication(
   '@xcedu/user',
-  () => System.import('@xcedu/user'),
+  // () => System.import('@xcedu/user'),
+  function () {
+    return System.import('@xcedu/user')
+  },
   actives.user
 )
 
 registerApplication(
   '@xcedu/space',
-  () => System.import('@xcedu/space'),
+  // () => System.import('@xcedu/space'),
+  function () {
+    return System.import('@xcedu/space')
+  },
   actives.space
 )
 
 registerApplication(
   '@xcedu/email',
-  () => System.import('@xcedu/email'),
+  // () => System.import('@xcedu/email'),
+  function () {
+    return System.import('@xcedu/email')
+  },
   actives.email
 )
 
 registerApplication(
   '@xcedu/forum',
-  () => System.import('@xcedu/forum'),
+  // () => System.import('@xcedu/forum'),
+  function () {
+    return System.import('@xcedu/forum')
+  },
   actives.forum
 )
 
 registerApplication(
   '@xcedu/testBank',
-  () => System.import('@xcedu/testBank'),
+  // () => System.import('@xcedu/testBank'),
+  function () {
+    return System.import('@xcedu/testBank')
+  },
   actives.testBank
 )
 
