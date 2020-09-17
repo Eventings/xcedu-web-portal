@@ -18,7 +18,7 @@ export function user (location) {
 
 export function navbar (location) {
   return SPEICAL_EXIST_NAVBAR_PWD_URLS.includes(location.pathname) || !NOT_EXIST_NAVBAR_URL_PREFIXES.some(function (prefix) {
-    location.pathname.startsWith(prefix)
+    return location.pathname.startsWith(prefix)
   })
 }
 
