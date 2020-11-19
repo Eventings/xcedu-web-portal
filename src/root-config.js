@@ -64,6 +64,14 @@ registerApplication(
   actives.courseSelection
 )
 
+registerApplication(
+  '@xcedu/conference-management',
+  function () {
+    return System.import('@xcedu/conference-management')
+  },
+  actives.conferenceManagement
+)
+
 start({ urlRerouteOnly: true })
 if (location.pathname === '/') {
   // 获取url从旧的系统中带过来的token
