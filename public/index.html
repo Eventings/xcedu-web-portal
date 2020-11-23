@@ -42,6 +42,10 @@
   <script src="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcedu-components.js"></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js"></script>
   <script>
+    // 会议管理加载百度地图
+    if (location.pathname.indexOf('/mfs-conference-management') === 0) {
+      document.write('<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=wqyUZkghpWsr4pDsIL7UzVMwbrKuh8Gn"><\/script>');
+    }
     System.import('@xcedu/portal');
   </script>
 </body>
