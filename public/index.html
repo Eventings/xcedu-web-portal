@@ -19,13 +19,16 @@
     "@xcedu/navigate": "http://gtyz.xiaochuang.com:8007/main.js",
     "@xcedu/testBank": "http://gtyz.xiaochuang.com:8006/main.js",
     "@xcedu/forum": "http://gtyz.xiaochuang.com:8007/main.js",
-    "@xcedu/ecard":"http://gtyz.xiaochuang.com:8005/main.js"
+    "@xcedu/ecard":"http://gtyz.xiaochuang.com:8005/main.js",
+    "@xcedu/course-selection":"http://gtyz.xiaochuang.com:8008/main.js",
+    "@xcedu/conference-management":"http://gtyz.xiaochuang.com:8009/main.js"
   }}
   </script>
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/polyfill/minified.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js" as="script">
-  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcbase.js" as="script">
+  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcedu-share.js" as="script">
+  <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcedu-components.js" as="script">
   <link rel="preload" href="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js" as="script">
   <link href="<%= MODULE_COMMON_BASE_URL %>/element/element-blue.css" type="text/css" rel="stylesheet" />
   <link href="<%= MODULE_COMMON_BASE_URL %>/widget/common-blue.css" type="text/css" rel="stylesheet">
@@ -35,9 +38,14 @@
   <script src="<%= MODULE_COMMON_BASE_URL %>/polyfill/minified.js" ></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor.min.js"></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/element/element-ui.min.js"></script>
-  <script src="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcbase.js"></script>
+  <script src="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcedu-share.js"></script>
+  <script src="<%= MODULE_COMMON_BASE_URL %>/xcbase/xcedu-components.js"></script>
   <script src="<%= MODULE_COMMON_BASE_URL %>/lib/vendor-spa.min.js"></script>
   <script>
+    // 会议管理加载百度地图
+    if (location.pathname.indexOf('/mfs-conference-management') === 0) {
+      document.write('<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=wqyUZkghpWsr4pDsIL7UzVMwbrKuh8Gn"><\/script>');
+    }
     System.import('@xcedu/portal');
   </script>
 </body>
